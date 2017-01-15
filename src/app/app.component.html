@@ -1,4 +1,11 @@
 <main>
-    <h1>Bookkeeping is now on desktop!</h1>
-    <img src="../../public/images/bookkeeping-landing.png">
+    <h1>{{title}}</h1>
+    <h2>{{hero.name}} details!</h2>
+    <div>
+        <label>id: </label>{{hero.id}}
+    </div>
+    <div>
+        <label>name: </label>
+        <input [(ngModel)]="hero.name" placeholder="name">
+    </div>
 </main>
