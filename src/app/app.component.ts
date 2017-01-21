@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Hero } from './hero';
 import '../../public/css/styles.css';
 
 const HEROES: Hero[] = [
@@ -20,17 +21,11 @@ const HEROES: Hero[] = [
     styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-    selectedHero: Hero;
-
     title = 'Tour of Heroes';
     heroes = HEROES;
+    selectedHero: Hero;
 
     onSelect(hero: Hero): void {
         this.selectedHero = hero;
     }
-}
-
-export class Hero {
-    id: number;
-    name: string;
 }
