@@ -1,8 +1,16 @@
 <main>
-    <h1>{{ title }}</h1>
+    <md-toolbar>
+        <span>{{ title }}</span>
+
+        <button md-button (click)="gotoConsumptions()"><md-icon>home</md-icon>Consumptions</button>
+        <button md-button (click)="gotoCategories()">Categories</button>
+        <button md-button>Reports</button>
+    </md-toolbar>
+    <!--
     <nav>
         <a routerLink="/dashboard" routerLinkActive="active">Dashboard</a>
         <a routerLink="/heroes" routerLinkActive="active">Heroes</a>
     </nav>
+    -->
     <router-outlet></router-outlet>
 </main>

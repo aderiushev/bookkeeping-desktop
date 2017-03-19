@@ -1,14 +1,14 @@
 import { Injectable } from '@angular/core';
-import { Hero } from './hero';
+import { Category } from './category';
 import { HEROES } from './mock-heroes';
 
 @Injectable()
 export class HeroService {
-    getHeroes(): Promise<Hero[]> {
+    getHeroes(): Promise<Category[]> {
         return Promise.resolve(HEROES);
     }
 
-    getHero(id: number): Promise<Hero> {
+    getHero(id: number): Promise<Category> {
         return Promise.resolve(HEROES.find(hero => hero.id === id));
     }
 }

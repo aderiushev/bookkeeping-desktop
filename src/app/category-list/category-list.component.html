@@ -1,0 +1,17 @@
+<section>
+    <ul class="heroes">
+        <li
+            *ngFor="let category of categories"
+            (click)="onSelect(category)"
+            [class.selected]="selectedCategory === category"
+        >
+            <span class="badge">{{category.id}}</span>&nbsp;{{category.name}}
+        </li>
+    </ul>
+    <div *ngIf="selectedCategory">
+        <h2>
+            Consumptions of {{ selectedCategory.name | uppercase }}:
+        </h2>
+        <button (click)="gotoDetail()">View Details</button>
+    </div>
+</section>
